@@ -8,6 +8,6 @@ class Criterion:
             criteria = []
             for i in range(1, len(self.table_data)):
                 for j in range(self.index, self.index + 1):
-                    criteria.append(self.table_data[i][j])
+                    criteria.append(float(self.table_data[i][j]))
             
             return criteria
