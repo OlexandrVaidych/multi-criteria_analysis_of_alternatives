@@ -19,7 +19,11 @@ def main():
     
     normalized_weight_coefficient1 = NormalizedWeightCoefficient(criteria1)
     normalized_weight_coefficients1 = normalized_weight_coefficient1.calc_norm_weight_coeffs()
-    print(normalized_weight_coefficients1)
+    #print(normalized_weight_coefficients1)
+
+    normalized_weight_coefficient2 = NormalizedWeightCoefficient(criteria2)
+    normalized_weight_coefficients2 = normalized_weight_coefficient2.calc_norm_weight_coeffs()
+    print(normalized_weight_coefficients2)
 
     root.mainloop()
 
