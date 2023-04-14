@@ -16,6 +16,14 @@ def main():
     criterion2 = Criterion(table_data, 2)
     criteria2 = criterion2.get_criteria()
     #print(criteria2)
+
+    criterion3 = Criterion(table_data, 3)
+    criteria3 = criterion3.get_criteria()
+    print(criteria3)
+
+    criterion4 = Criterion(table_data, 4)
+    criteria4 = criterion4.get_criteria()
+    print(criteria4)
     
     normalized_weight_coefficient1 = NormalizedWeightCoefficient(criteria1)
     normalized_weight_coefficients1 = normalized_weight_coefficient1.calc_norm_weight_coeffs()
