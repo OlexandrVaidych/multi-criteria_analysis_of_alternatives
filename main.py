@@ -19,7 +19,7 @@ def main():
 
     criterion3 = Criterion(table_data, 3)
     criteria3 = criterion3.get_criteria()
-    print(criteria3)
+    #print(criteria3)
 
     criterion4 = Criterion(table_data, 4)
     criteria4 = criterion4.get_criteria()
@@ -32,6 +32,14 @@ def main():
     normalized_weight_coefficient2 = NormalizedWeightCoefficient(criteria2)
     normalized_weight_coefficients2 = normalized_weight_coefficient2.calc_norm_weight_coeffs()
     #print(normalized_weight_coefficients2)
+
+    normalized_weight_coefficient3 = NormalizedWeightCoefficient(criteria3)
+    normalized_weight_coefficients3 = normalized_weight_coefficient3.calc_norm_weight_coeffs()
+    #print(normalized_weight_coefficients3)
+
+    normalized_weight_coefficient4 = NormalizedWeightCoefficient(criteria4)
+    normalized_weight_coefficients4 = normalized_weight_coefficient4.calc_norm_weight_coeffs()
+    print(normalized_weight_coefficients4)
 
     convolution1 = Convolution(criteria1, normalized_weight_coefficients1)
     average_convolution1 = convolution1.calc_average_convolution()
