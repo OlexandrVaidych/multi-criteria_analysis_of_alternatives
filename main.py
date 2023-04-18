@@ -3,12 +3,10 @@ from convolution import Convolution
 from criterion import Criterion
 from norm_weight_coeff import NormalizedWeightCoefficient
 from table import table_data
-from tkinter import Tk
+from tkinter import Button, Label, Tk
 from table import Table
 
-def main():
-    root = Tk()
-    table = Table(root)
+def get_best_alternative(root):
     alternatives = ['x1', 'x2', 'x3', 'x4']
 
     criterion1 = Criterion(table_data, 1)
@@ -73,6 +71,25 @@ def main():
     best_alternative = alternative.select_best_alternative()
     #print(best_alternative)
 
+    best_alternative_l = Label(root, text=best_alternative)
+    best_alternative_l.grid(row=12, column=2)
+   
+
+def main():
+    root = Tk()
+    root.geometry("700x265")
+    table = Table(root)
+    empty_l = Label(root)
+    
+    get_best_alternative_b = Button(
+       root, 
+       text="The best alternative to determine", 
+       command=lambda: get_best_alternative(root)
+       )
+    
+    empty_l.grid(row=10, column=2)
+    get_best_alternative_b.grid(row=11, column=2)
+    
     root.mainloop()
 
 
