@@ -4,7 +4,7 @@ from alternative.convolution import Convolution
 from alternative.criterion import Criterion
 from alternative.data import table_data
 from alternative.norm_weight_coeff import NormalizedWeightCoefficient
-from alternative.table import Table
+from table import Table
 
 
 def get_best_alternative(alternative_window):
@@ -65,7 +65,8 @@ def get_best_alternative(alternative_window):
 def alternative_gui():
     alternative_window = Tk()
     alternative_window.geometry("700x265")
-    table = Table(alternative_window)
+    table = Table(alternative_window, table_data)
+    table.create_table()
     empty_l = Label(alternative_window)
     
     get_best_alternative_b = Button(
