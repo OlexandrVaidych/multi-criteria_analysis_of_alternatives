@@ -3,7 +3,7 @@ from alternative.alternative import Alternative
 from alternative.convolution import Convolution
 from criterion import Criterion
 from alternative.data import table_data
-from alternative.norm_weight_coeff import NormalizedWeightCoefficient
+from norm_weight_coeff import NormalizedWeightCoefficient
 from table import Table
 
 

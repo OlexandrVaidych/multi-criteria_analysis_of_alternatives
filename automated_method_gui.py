@@ -1,4 +1,5 @@
 from tkinter import Tk
+from norm_weight_coeff import NormalizedWeightCoefficient
 from criterion import Criterion
 from data2 import table_data2
 from table import Table
@@ -12,7 +13,12 @@ def authomated_method_gui():
     table.create_table()
 
     criterion1 = Criterion(table_data2, 1)
-    #print(criterion1.get_criteria())
+    criteria1 = criterion1.get_criteria() 
+    #print(criteria1)
+
+    normalized_weight_coefficient1 = NormalizedWeightCoefficient(criteria1)
+    normalized_weight_coefficients1 = normalized_weight_coefficient1.calc_norm_weight_coeffs()
+    #print(normalized_weight_coefficients1)
 
     """
     empty_l = Label(alternative_window)
