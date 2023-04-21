@@ -1,4 +1,5 @@
 from tkinter import Tk
+from criterion import Criterion
 from data2 import table_data2
 from table import Table
 
@@ -9,6 +10,10 @@ def authomated_method_gui():
     
     table = Table(authomated_method_window, table_data2)
     table.create_table()
+
+    criterion1 = Criterion(table_data2, 1)
+    #print(criterion1.get_criteria())
+
     """
     empty_l = Label(alternative_window)
     
