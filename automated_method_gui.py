@@ -2,6 +2,7 @@ from tkinter import Entry, Label, Tk
 from norm_weight_coeff import NormalizedWeightCoefficient
 from criterion import Criterion
 from data2 import table_data2
+from number import Number
 from table import Table
 
 
@@ -23,9 +24,20 @@ def authomated_method_gui():
     pleasure_point_l = Label(authomated_method_window, text='Pleasure point: ')
     pleasure_point_e = Entry(authomated_method_window)
     pleasure_point_e.insert(0, "20, 20, 15, 20")
-
-    pleasure_point = pleasure_point_e.get().split(",")
+   
+    num = Number(pleasure_point_e)
+    pleasure_point = num.get_nums()
     #print(pleasure_point)
+
+    """
+    def get_matrix_column(criteria1, pleasure_point):
+      criteria_min = min(criteria1)
+      criteria_max = max(criteria1)
+      el = 1 - (abs(pleasure_point[0] - criteria1[0])) / max(pleasure_point[0] - criteria_min, criteria_max - pleasure_point[0])
+      print(el)
+
+    get_matrix_column(criteria1, pleasure_point)
+    """
 
     pleasure_point_l.grid(row=5, column=0)
     pleasure_point_e.grid(row=5, column=1)
