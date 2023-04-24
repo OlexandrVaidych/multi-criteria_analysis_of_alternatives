@@ -24,6 +24,9 @@ def authomated_method_gui():
     pleasure_point_e = Entry(authomated_method_window)
     pleasure_point_e.insert(0, "20, 20, 15, 20")
 
+    pleasure_point = pleasure_point_e.get().split(",")
+    #print(pleasure_point)
+
     pleasure_point_l.grid(row=5, column=0)
     pleasure_point_e.grid(row=5, column=1)
 
