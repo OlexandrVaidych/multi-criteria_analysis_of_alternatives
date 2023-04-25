@@ -1,4 +1,5 @@
 from tkinter import Entry, Label, Tk
+from matrix_column import MatrixColumn
 from norm_weight_coeff import NormalizedWeightCoefficient
 from criterion import Criterion
 from data2 import table_data2
@@ -29,32 +30,12 @@ def authomated_method_gui():
     pleasure_point = num.get_nums()
     #print(pleasure_point)
 
-    """
-    def get_matrix_column(criteria1, pleasure_point):
-      criteria_min = min(criteria1)
-      criteria_max = max(criteria1)
-      el = 1 - (abs(pleasure_point[0] - criteria1[0])) / max(pleasure_point[0] - criteria_min, criteria_max - pleasure_point[0])
-      print(el)
-
-    get_matrix_column(criteria1, pleasure_point)
-    """
+    matrix_column1 = MatrixColumn(criteria1, pleasure_point)
+    matrix_elements1 = matrix_column1.calc_matrix_column()
+    print(matrix_elements1)
 
     pleasure_point_l.grid(row=5, column=0)
     pleasure_point_e.grid(row=5, column=1)
-
-
-    """
-    empty_l = Label(alternative_window)
-    
-    get_best_alternative_b = Button(
-       alternative_window, 
-       text="The best alternative to determine", 
-       command=lambda: get_best_alternative(alternative_window)
-       )
-    
-    empty_l.grid(row=10, column=2)
-    get_best_alternative_b.grid(row=11, column=2)
-    """
 
     authomated_method_window.mainloop()
     
