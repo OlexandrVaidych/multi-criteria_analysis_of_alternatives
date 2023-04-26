@@ -88,6 +88,9 @@ def authomated_method(window, alternatives, pleasure_point):
     best_alternative = alternative.select_best_alternative()
     #print(best_alternative)
 
+    best_alternative_l = Label(window, text=best_alternative)
+    best_alternative_l.grid(row=7, column=2)
+
 
 def authomated_method_gui():
     authomated_method_window = Tk()
