@@ -35,6 +35,18 @@ def authomated_method_gui():
     normalized_weight_coefficients1 = normalized_weight_coefficient1.calc_norm_weight_coeffs()
     #print(normalized_weight_coefficients1)
 
+    normalized_weight_coefficient2 = NormalizedWeightCoefficient(criteria2)
+    normalized_weight_coefficients2 = normalized_weight_coefficient2.calc_norm_weight_coeffs()
+    #print(normalized_weight_coefficients2)
+
+    normalized_weight_coefficient3 = NormalizedWeightCoefficient(criteria3)
+    normalized_weight_coefficients3 = normalized_weight_coefficient3.calc_norm_weight_coeffs()
+    #print(normalized_weight_coefficients3)
+
+    normalized_weight_coefficient4 = NormalizedWeightCoefficient(criteria4)
+    normalized_weight_coefficients4 = normalized_weight_coefficient4.calc_norm_weight_coeffs()
+    #print(normalized_weight_coefficients4)
+
     pleasure_point_l = Label(authomated_method_window, text='Pleasure point: ')
     pleasure_point_e = Entry(authomated_method_window)
     pleasure_point_e.insert(0, "20, 20, 15, 20")
