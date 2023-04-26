@@ -59,6 +59,18 @@ def authomated_method_gui():
     matrix_elements1 = matrix_column1.calc_matrix_column()
     #print(matrix_elements1)
 
+    matrix_column2 = MatrixColumn(criteria2, pleasure_point)
+    matrix_elements2 = matrix_column2.calc_matrix_column()
+    #print(matrix_elements2)
+
+    matrix_column3 = MatrixColumn(criteria3, pleasure_point)
+    matrix_elements3 = matrix_column3.calc_matrix_column()
+    #print(matrix_elements3)
+
+    matrix_column4 = MatrixColumn(criteria4, pleasure_point)
+    matrix_elements4 = matrix_column4.calc_matrix_column()
+    #print(matrix_elements4)
+
     convolution1 = Convolution(matrix_elements1, normalized_weight_coefficients1)
     average_convolution1 = convolution1.calc_average_convolution()
     #print(average_convolution1)

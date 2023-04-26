@@ -14,7 +14,7 @@ class MatrixColumn():
         for i in range(criteria_len):
             matrix_el = 1 - (abs(self.pleasure_point[i] - self.criteria[i])) / max(self.pleasure_point[i] - criteria_min, 
                                                                                    criteria_max - self.pleasure_point[i])
-            matrix_column.append(matrix_el)
+            matrix_column.append(round(matrix_el, 2))
     
         return matrix_column
     
