@@ -19,6 +19,18 @@ def authomated_method_gui():
     criteria1 = criterion1.get_criteria() 
     #print(criteria1)
 
+    criterion2 = Criterion(table_data2, 2)
+    criteria2 = criterion2.get_criteria() 
+    #print(criteria2)
+
+    criterion3 = Criterion(table_data2, 3)
+    criteria3 = criterion3.get_criteria() 
+    #print(criteria3)
+
+    criterion4 = Criterion(table_data2, 4)
+    criteria4 = criterion4.get_criteria() 
+    #print(criteria4)
+
     normalized_weight_coefficient1 = NormalizedWeightCoefficient(criteria1)
     normalized_weight_coefficients1 = normalized_weight_coefficient1.calc_norm_weight_coeffs()
     #print(normalized_weight_coefficients1)
