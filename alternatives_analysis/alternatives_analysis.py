@@ -2,7 +2,7 @@ from tkinter import Button, Label, Tk
 from alternative import Alternative
 from convolution import Convolution
 from criterion import Criterion
-from data import table_data
+from alternatives_analysis.data import table_data
 from norm_weight_coeff import NormalizedWeightCoefficient
 from table import Table
 
