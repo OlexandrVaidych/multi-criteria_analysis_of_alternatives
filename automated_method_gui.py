@@ -1,4 +1,5 @@
 from tkinter import Entry, Label, Tk
+from convolution import Convolution
 from matrix_column import MatrixColumn
 from norm_weight_coeff import NormalizedWeightCoefficient
 from criterion import Criterion
@@ -32,7 +33,11 @@ def authomated_method_gui():
 
     matrix_column1 = MatrixColumn(criteria1, pleasure_point)
     matrix_elements1 = matrix_column1.calc_matrix_column()
-    print(matrix_elements1)
+    #print(matrix_elements1)
+
+    convolution1 = Convolution(matrix_elements1, normalized_weight_coefficients1)
+    average_convolution1 = convolution1.calc_average_convolution()
+    #print(average_convolution1)
 
     pleasure_point_l.grid(row=5, column=0)
     pleasure_point_e.grid(row=5, column=1)
