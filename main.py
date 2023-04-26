@@ -1,16 +1,16 @@
 from tkinter import Button, Tk
-from alternative_gui import alternative_gui
+from alternatives_analysis import alternatives_analysis_method_gui
 from automated_method_gui import authomated_method_gui
 
 
 def main():
     root = Tk()
-    root.geometry("250x50")
+    root.geometry("300x50")
 
-    alternative_b = Button(
+    alternatives_analysis_method_b = Button(
        root, 
-       text="The best alternative", 
-       command= lambda: alternative_gui()
+       text="Alternatives analysis method", 
+       command= lambda: alternatives_analysis_method_gui()
        )
     
     automated_method_b = Button(
@@ -19,7 +19,7 @@ def main():
        command= lambda: authomated_method_gui()
        )
     
-    alternative_b.grid(row=0, column=0)
+    alternatives_analysis_method_b.grid(row=0, column=0)
     automated_method_b.grid(row=0, column=1)
     
     root.mainloop()

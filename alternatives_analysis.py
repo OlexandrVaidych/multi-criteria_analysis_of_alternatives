@@ -7,7 +7,7 @@ from norm_weight_coeff import NormalizedWeightCoefficient
 from table import Table
 
 
-def get_best_alternative(alternative_window):
+def alternatives_analysis_method(alternative_window):
     alternatives = ['x1', 'x2', 'x3', 'x4']
 
     criterion1 = Criterion(table_data, 1)
@@ -61,17 +61,19 @@ def get_best_alternative(alternative_window):
     best_alternative_l = Label(alternative_window, text=best_alternative)
     best_alternative_l.grid(row=12, column=2)
 
-def alternative_gui():
+def alternatives_analysis_method_gui():
     alternative_window = Tk()
     alternative_window.geometry("700x265")
+
     table = Table(alternative_window, table_data)
     table.create_table()
+
     empty_l = Label(alternative_window)
     
     get_best_alternative_b = Button(
        alternative_window, 
        text="The best alternative to determine", 
-       command=lambda: get_best_alternative(alternative_window)
+       command=lambda: alternatives_analysis_method(alternative_window)
        )
     
     empty_l.grid(row=10, column=2)
