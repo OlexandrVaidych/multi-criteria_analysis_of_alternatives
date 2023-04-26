@@ -1,5 +1,5 @@
 from tkinter import Button, Tk
-from alternative.alternative_gui import alternative_gui
+from alternative_gui import alternative_gui
 from automated_method_gui import authomated_method_gui
 
 

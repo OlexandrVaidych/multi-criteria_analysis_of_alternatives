@@ -1,8 +1,8 @@
 from tkinter import Button, Label, Tk
-from alternative.alternative import Alternative
+from alternative import Alternative
 from convolution import Convolution
 from criterion import Criterion
-from alternative.data import table_data
+from data import table_data
 from norm_weight_coeff import NormalizedWeightCoefficient
 from table import Table
 
@@ -47,16 +47,15 @@ def get_best_alternative(alternative_window):
     average_convolution4 = convolution4.calc_average_convolution()
 
     convolutions = [average_convolution1, average_convolution2, average_convolution3, average_convolution4]
+
     average_convolutions = {
        alternatives[0]: convolutions[0],
        alternatives[1]: convolutions[1],
        alternatives[2]: convolutions[2],
        alternatives[3]: convolutions[3]
        }
-    
-    max_convolution = max(convolutions)
 
-    alternative = Alternative(max_convolution, average_convolutions)
+    alternative = Alternative(convolutions, average_convolutions)
     best_alternative = alternative.select_best_alternative()
 
     best_alternative_l = Label(alternative_window, text=best_alternative)

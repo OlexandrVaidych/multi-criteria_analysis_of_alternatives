@@ -1,12 +1,14 @@
 class Alternative:
 
-    def __init__(self, max_convolution, average_convolutions):
-        self.max_convolution = max_convolution
+    def __init__(self, convolutions, average_convolutions):
+        self.convolutions = convolutions
         self.average_convolutions = average_convolutions
     
     def select_best_alternative(self):
+        max_convolution = max(self.convolutions)
+        
         for i in self.average_convolutions:
-            if self.max_convolution == self.average_convolutions[i]:
+            if max_convolution == self.average_convolutions[i]:
                 alternative = i
                 break        
 

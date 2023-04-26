@@ -1,4 +1,5 @@
 from tkinter import Entry, Label, Tk
+from alternative import Alternative
 from convolution import Convolution
 from matrix_column import MatrixColumn
 from norm_weight_coeff import NormalizedWeightCoefficient
@@ -11,6 +12,8 @@ from table import Table
 def authomated_method_gui():
     authomated_method_window = Tk()
     authomated_method_window.geometry("700x265")
+
+    alternatives = ['x1', 'x2', 'x3', 'x4']
     
     table = Table(authomated_method_window, table_data2)
     table.create_table()
@@ -86,6 +89,20 @@ def authomated_method_gui():
     convolution4 = Convolution(matrix_elements4, normalized_weight_coefficients4)
     average_convolution4 = convolution4.calc_average_convolution()
     #print(average_convolution4)
+
+    convolutions = [average_convolution1, average_convolution2, average_convolution3, average_convolution4]
+    #print(convolutions)
+
+    average_convolutions = {
+       alternatives[0]: convolutions[0],
+       alternatives[1]: convolutions[1],
+       alternatives[2]: convolutions[2],
+       alternatives[3]: convolutions[3]
+       }
+    
+    alternative = Alternative(convolutions, average_convolutions)
+    best_alternative = alternative.select_best_alternative()
+    #print(best_alternative)
 
     pleasure_point_l.grid(row=5, column=0)
     pleasure_point_e.grid(row=5, column=1)
