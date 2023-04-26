@@ -9,15 +9,7 @@ from number import Number
 from table import Table
 
 
-def authomated_method_gui():
-    authomated_method_window = Tk()
-    authomated_method_window.geometry("700x265")
-
-    alternatives = ['x1', 'x2', 'x3', 'x4']
-    
-    table = Table(authomated_method_window, table_data2)
-    table.create_table()
-
+def authomated_method(window, alternatives, pleasure_point):
     criterion1 = Criterion(table_data2, 1)
     criteria1 = criterion1.get_criteria() 
     #print(criteria1)
@@ -49,14 +41,6 @@ def authomated_method_gui():
     normalized_weight_coefficient4 = NormalizedWeightCoefficient(criteria4)
     normalized_weight_coefficients4 = normalized_weight_coefficient4.calc_norm_weight_coeffs()
     #print(normalized_weight_coefficients4)
-
-    pleasure_point_l = Label(authomated_method_window, text='Pleasure point: ')
-    pleasure_point_e = Entry(authomated_method_window)
-    pleasure_point_e.insert(0, "20, 20, 15, 20")
-   
-    num = Number(pleasure_point_e)
-    pleasure_point = num.get_nums()
-    #print(pleasure_point)
 
     matrix_column1 = MatrixColumn(criteria1, pleasure_point)
     matrix_elements1 = matrix_column1.calc_matrix_column()
@@ -103,6 +87,26 @@ def authomated_method_gui():
     alternative = Alternative(convolutions, average_convolutions)
     best_alternative = alternative.select_best_alternative()
     #print(best_alternative)
+
+
+def authomated_method_gui():
+    authomated_method_window = Tk()
+    authomated_method_window.geometry("700x265")
+
+    alternatives = ['x1', 'x2', 'x3', 'x4']
+    
+    table = Table(authomated_method_window, table_data2)
+    table.create_table()
+
+    pleasure_point_l = Label(authomated_method_window, text='Pleasure point: ')
+    pleasure_point_e = Entry(authomated_method_window)
+    pleasure_point_e.insert(0, "20, 20, 15, 20")
+   
+    num = Number(pleasure_point_e)
+    pleasure_point = num.get_nums()
+    #print(pleasure_point)
+
+    authomated_method(authomated_method_window, alternatives, pleasure_point)
 
     pleasure_point_l.grid(row=5, column=0)
     pleasure_point_e.grid(row=5, column=1)
