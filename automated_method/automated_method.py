@@ -1,11 +1,11 @@
 from tkinter import Button, Entry, Label, Tk
 from alternative import Alternative
 from convolution import Convolution
-from matrix_column import MatrixColumn
+from automated_method.matrix_column import MatrixColumn
 from norm_weight_coeff import NormalizedWeightCoefficient
 from criterion import Criterion
-from data2 import table_data2
-from number import Number
+from automated_method.data2 import table_data2
+from automated_method.number import Number
 from table import Table
 
 

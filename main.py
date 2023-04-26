@@ -1,6 +1,6 @@
 from tkinter import Button, Tk
 from alternatives_analysis import alternatives_analysis_method_gui
-from automated_method import authomated_method_gui
+from automated_method.automated_method import authomated_method_gui
 
 
 def main():
