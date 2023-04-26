@@ -1,4 +1,4 @@
-from tkinter import Entry, Label, Tk
+from tkinter import Button, Entry, Label, Tk
 from alternative import Alternative
 from convolution import Convolution
 from matrix_column import MatrixColumn
@@ -106,10 +106,15 @@ def authomated_method_gui():
     pleasure_point = num.get_nums()
     #print(pleasure_point)
 
-    authomated_method(authomated_method_window, alternatives, pleasure_point)
+    get_best_alternative_b = Button(
+       authomated_method_window, 
+       text="The best alternative to determine", 
+       command=lambda: authomated_method(authomated_method_window, alternatives, pleasure_point)
+       )
 
     pleasure_point_l.grid(row=5, column=0)
     pleasure_point_e.grid(row=5, column=1)
+    get_best_alternative_b.grid(row=6, column=2)
 
     authomated_method_window.mainloop()
     
