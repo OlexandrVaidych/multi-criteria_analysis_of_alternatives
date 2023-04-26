@@ -75,6 +75,18 @@ def authomated_method_gui():
     average_convolution1 = convolution1.calc_average_convolution()
     #print(average_convolution1)
 
+    convolution2 = Convolution(matrix_elements2, normalized_weight_coefficients2)
+    average_convolution2 = convolution2.calc_average_convolution()
+    #print(average_convolution2)
+
+    convolution3 = Convolution(matrix_elements3, normalized_weight_coefficients3)
+    average_convolution3 = convolution3.calc_average_convolution()
+    #print(average_convolution3)
+
+    convolution4 = Convolution(matrix_elements4, normalized_weight_coefficients4)
+    average_convolution4 = convolution4.calc_average_convolution()
+    #print(average_convolution4)
+
     pleasure_point_l.grid(row=5, column=0)
     pleasure_point_e.grid(row=5, column=1)
 
