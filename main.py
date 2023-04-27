@@ -1,11 +1,17 @@
-from tkinter import Button, Tk
+from tkinter import Button, Label, Tk
 from alternatives_analysis.alternatives_analysis import alternatives_analysis_method_gui
 from automated_method.automated_method import authomated_method_gui
 
 
 def main():
     root = Tk()
-    root.geometry("300x50")
+    root.geometry("450x100")
+
+    title_l = Label(
+       root, 
+       text="Determining the best alternative using multicriteria methods", 
+       font=('Times', 14)
+       )
 
     alternatives_analysis_method_b = Button(
        root, 
@@ -19,8 +25,9 @@ def main():
        command= lambda: authomated_method_gui()
        )
     
-    alternatives_analysis_method_b.grid(row=0, column=0)
-    automated_method_b.grid(row=0, column=1)
+    title_l.pack()
+    alternatives_analysis_method_b.pack(side='left', padx=30)
+    automated_method_b.pack(side='right', padx=30)
     
     root.mainloop()
 
