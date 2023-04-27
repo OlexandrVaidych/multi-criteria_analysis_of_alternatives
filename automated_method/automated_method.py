@@ -92,7 +92,7 @@ def authomated_method_gui():
 
     get_best_alternative_b = Button(
        authomated_method_window, 
-       text="The best alternative to determine", 
+       text="Determine", 
        command=lambda: authomated_method(authomated_method_window, alternatives, pleasure_point)
        )
 

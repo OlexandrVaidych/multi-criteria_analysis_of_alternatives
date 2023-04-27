@@ -72,7 +72,7 @@ def alternatives_analysis_method_gui():
     
     get_best_alternative_b = Button(
        alternative_window, 
-       text="The best alternative to determine", 
+       text="Determine", 
        command=lambda: alternatives_analysis_method(alternative_window, alternatives)
        )
     
