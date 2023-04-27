@@ -61,7 +61,7 @@ def alternatives_analysis_method(alternative_window, alternatives):
 
 def alternatives_analysis_method_gui():
     alternative_window = Tk()
-    alternative_window.geometry("700x265")
+    alternative_window.geometry("650x265")
 
     alternatives = ['x1', 'x2', 'x3', 'x4']
 

@@ -76,7 +76,7 @@ def authomated_method(window, alternatives, pleasure_point):
 
 def authomated_method_gui():
     authomated_method_window = Tk()
-    authomated_method_window.geometry("700x265")
+    authomated_method_window.geometry("650x170")
 
     alternatives = ['x1', 'x2', 'x3', 'x4']
     
